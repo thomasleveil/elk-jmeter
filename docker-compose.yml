@@ -1,0 +1,28 @@
+elasticsearch:
+  image: elasticsearch
+  ports:
+    - "9200:9200"
+
+serveragent:
+  build: serveragent
+  expose:
+  - 4444
+  ports:
+  - "4444"
+
+logstash:
+  build: logstash
+  links:
+    - elasticsearch
+    - serveragent
+  volumes:
+    - logstash-conf:/conf
+  command: logstash agent -f /conf/logstash.conf
+
+kibana:
+  image: kibana
+  ports:
+    - "5601:5601"
+  links:
+    - elasticsearch
+
