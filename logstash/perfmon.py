@@ -43,10 +43,5 @@ if __name__ == "__main__":
                     else :
                         #print data
                         sys.stdout.write(data)
-                 
-                #user entered a message
-                else :
-                    msg = sys.stdin.readline()
-                    s.send(msg)
     except KeyboardInterrupt:
         pass
