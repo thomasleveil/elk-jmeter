@@ -28,10 +28,10 @@ if __name__ == "__main__":
 
     try:
         while 1:
-            socket_list = [sys.stdin, s]
+            socket_list = [s]
              
             # Get the list sockets which are readable
-            read_sockets, write_sockets, error_sockets = select.select(socket_list , [], [])
+            read_sockets, write_sockets, error_sockets = select.select(socket_list , [], [], 1)
              
             for sock in read_sockets:
                 #incoming message from remote server
