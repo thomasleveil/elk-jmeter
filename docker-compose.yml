@@ -16,7 +16,7 @@ logstash:
     - elasticsearch
     - serveragent
   volumes:
-    - logstash-conf:/conf
+    - .:/conf
   command: logstash agent -f /conf/logstash.conf
 
 kibana:
