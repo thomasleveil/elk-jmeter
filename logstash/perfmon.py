@@ -24,7 +24,7 @@ if __name__ == "__main__":
         sys.exit(2)
 
     s.send("interval:%s\n" % sys.argv[3])
-    s.send("metrics:%s\n" % sys.argv[4])
+    s.send("%s\n" % sys.argv[4])
 
     try:
         while 1:
