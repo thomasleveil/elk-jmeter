@@ -1,6 +1,6 @@
 Experimenting with ELK / JMeter PerfMon Server Agent
 
-I have servers setup with the JMeter PerfMon Server Agent and would like to collect the data provided by this agent with Logstash to store it in Elasticsearch and visualise the data with Kibana.
+I have servers setup with the JMeter PerfMon Server Agent and would like to collect the [data provided](http://jmeter-plugins.org/wiki/PerfMonMetrics/) by this agent with Logstash to store it in Elasticsearch and visualise the data with Kibana.
 
 The python script [logstash/permon.py](logstash/permon.py) is a telnet like client which is able to harvest data reported by the JMeter PerfMon Server Agent over the network.
 
