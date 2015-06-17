@@ -8,7 +8,7 @@ serveragent:
   expose:
   - 4444
   ports:
-  - "4444"
+  - "4444:4444"
 
 logstash:
   build: logstash
